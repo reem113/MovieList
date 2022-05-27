@@ -5,7 +5,6 @@ const initialState = {
 };
 
 const movieReducer = (state = initialState, action) => {
-    console.log(state);
     switch (action.type) {
         case actions.SET_MOVIES:
             return { ...state };
