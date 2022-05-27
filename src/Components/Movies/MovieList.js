@@ -4,7 +4,7 @@ import { View, FlatList, SafeAreaView, StyleSheet } from 'react-native';
 import MovieListItem from './MovieListItem';
 import Seperator from '../Seperator';
 import LoadingIndicator from '../LoadingIndicator';
-import { setPage } from '../../Redux/Action/Movies';
+// import { setPage } from '../../Redux/Action/Movies';
 
 
 
@@ -12,11 +12,11 @@ const MovieList = () => {
 
     const movies = useSelector(state => state.movies.results);
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
-    const fetchResult = () => {
-        dispatch(setPage(2));
-    }
+    // const fetchResult = () => {
+    //     dispatch(setPage(2));
+    // }
 
 
 
@@ -26,8 +26,8 @@ const MovieList = () => {
                 style={styles.list}
                 data={movies}
                 keyExtractor={item => item.id}
-                onEndReached={fetchResult}
-                onEndReachedThreshold={0.8}
+                // onEndReached={fetchResult}
+                // onEndReachedThreshold={0.8}
                 ItemSeparatorComponent={() => {
                     return <Seperator />
                 }}

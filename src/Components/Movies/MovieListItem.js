@@ -56,7 +56,8 @@ const styles = StyleSheet.create({
     overView: {
         flexWrap: "wrap",
         marginRight: 15,
-        fontSize: 16
+        fontSize: 16,
+        color: "#fff"
 
     },
     dateWrapper: {
@@ -68,6 +69,7 @@ const styles = StyleSheet.create({
     },
     releaseDate: {
         fontSize: 10,
+        color: "#fff"
 
 
     },

@@ -14,7 +14,6 @@ export const getMovies = () => {
         const store = configureStore();
 
         const page = store.getState().page;
-        console.log(page);
         dispatch({ type: actions.SET_MOVIES });
         await axios.get(baseUrl, { params: { api_key: "acea91d2bff1c53e6604e4985b6989e2", page } })
 
@@ -33,11 +32,11 @@ const getMoviesSuccess = (dispatch, movies) => {
     })
 }
 
-export const setPage = (page) =>
-({
-    type: actions.SET_PAGE,
-    page
-})
+// export const setPage = (page) =>
+// ({
+//     type: actions.SET_PAGE,
+//     page
+// })
 
 
 
