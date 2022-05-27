@@ -1,22 +1,29 @@
 import * as actions from '../types';
 const initialState = {
-    movies: []
+    movies: [],
+    page: 1
 };
+
 const movieReducer = (state = initialState, action) => {
-    console.log('reducer is ok');
+    console.log(state);
     switch (action.type) {
         case actions.SET_MOVIES:
-            console.log('movies reducer is ok');
             return { ...state };
         case actions.SET_MOVIES_SUCCESS:
-            console.log('moviesSucc reducer is ok');
             return {
 
                 ...state,
                 movies: action.payload
             };
+        case actions.SET_PAGE:
+            return {
+                ...state,
+                page: action.page
+            }
         default:
             return state;
     }
 }
+
+
 export default movieReducer;
